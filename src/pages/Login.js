@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { fetchData } from "../apiConfig";
+// import { fetchData } from "../apiConfig";
 import "../index.css";
 
 export const title = {
