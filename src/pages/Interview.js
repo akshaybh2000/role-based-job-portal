@@ -1,11 +1,11 @@
 // src/pages/Interview.js
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function Interview() {
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   const [interviews] = useState([
     {
