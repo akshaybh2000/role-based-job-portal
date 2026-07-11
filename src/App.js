@@ -5,6 +5,7 @@ import Jobs from "./pages/Jobs";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Interview from "./pages/Interview";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/interviews" element={<Interview />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>

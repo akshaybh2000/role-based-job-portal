@@ -32,8 +32,12 @@ function Navbar() {
                 <span>{role}</span>
 
                 <div className="profile-icon">
-                    👤
+
+                    <NavLink to="/profile">
+                        👤
+                    </NavLink>
                 </div>
+
 
                 <button
                     className="btn btn-danger"
