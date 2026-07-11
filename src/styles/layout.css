@@ -1,0 +1,160 @@
+/* ==========================
+   App Layout
+========================== */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--bg-dark);
+  color: var(--text-white);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-sidebar);
+}
+
+.sidebar-header {
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-lg);
+  font-weight: var(--font-bold);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu {
+  padding: var(--space-md);
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 8px;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-white);
+  transition: var(--transition-fast);
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background: var(--primary);
+}
+
+/* ==========================
+   Main Section
+========================== */
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar {
+  height: var(--navbar-height);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-navbar);
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* ==========================
+   Page Content
+========================== */
+
+.page-content {
+  flex: 1;
+  padding: var(--space-lg);
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer {
+  background: var(--bg-secondary);
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* ==========================
+   Mobile Menu Button
+========================== */
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    left: -100%;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .page-content {
+    padding: var(--space-md);
+  }
+}
