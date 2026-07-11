@@ -1,11 +1,11 @@
 // src/pages/Jobs.js
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function Jobs() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [jobs] = useState([
     {
