@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import axios from "axios";
-import { fetchData, getData } from "../apiConfig";
+import { getData } from "../apiConfig";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
