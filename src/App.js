@@ -4,6 +4,7 @@ import Signup from "./pages/Signup";
 import Jobs from "./pages/Jobs";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
+import Interview from "./pages/Interview";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/interviews" element={<Interview />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
