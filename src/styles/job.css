@@ -1,0 +1,90 @@
+
+.job-filter{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.job-filter .btn{
+
+    background:#fff;
+
+    border:1px solid var(--border-color);
+
+}
+
+.job-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border-left:5px solid var(--primary);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.10);
+
+}
+
+.job-card h2{
+
+    color:var(--text-primary);
+
+}
+
+.job-card h4{
+
+    color:var(--text-secondary);
+
+    margin-top:6px;
+
+}
+
+.job-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.job-info p{
+
+    color:var(--text-secondary);
+
+}
+
+@media(max-width:768px){
+
+.jobs-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.job-info{
+
+grid-template-columns:1fr;
+
+}
+
+}

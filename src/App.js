@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Jobs from "./pages/Jobs";
+import Home from "./pages/seeker/Home";
+import Interview from "./pages/seeker/Interview";
+import Profile from "./pages/seeker/Profile";
 import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
-import Interview from "./pages/Interview";
-import Profile from "./pages/Profile";
 
 function App() {
   return (
