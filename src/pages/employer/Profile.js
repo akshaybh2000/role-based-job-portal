@@ -1,19 +1,21 @@
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
 
-function SeekerProfile() {
+function EmployerProfile() {
   const [user] = useState({
-    name: "Akshay Bharati",
-    email: "akshay@example.com",
+    name: "John Smith",
+    email: "john.smith@abctech.com",
     phone: "+91 9876543210",
-    role: sessionStorage.getItem("role") || "SEEKER",
+    role: sessionStorage.getItem("role") || "EMPLOYER",
+    designation: "HR Manager",
+    department: "Human Resources",
+    company: "ABC Technologies Pvt. Ltd.",
     location: "Pune, Maharashtra",
-    experience: "2 Years",
-    skills: "React.js, JavaScript, Node.js, Express.js, MongoDB",
-    education: "B.E. Computer Engineering",
-    profileScore: "92%",
+    experience: "6 Years",
+    employeeId: "EMP1001",
+    joiningDate: "15 Jan 2021",
     about:
-      "Passionate Full Stack Developer with experience in React.js, Node.js, Express.js and MongoDB. Interested in building scalable web applications.",
+      "Experienced HR Manager responsible for talent acquisition, recruitment, employee engagement and interview management.",
   });
 
   return (
@@ -24,9 +26,10 @@ function SeekerProfile() {
 
         <div className="grid grid-3">
           {/* Left Card */}
+
           <div className="card text-center">
             <img
-              src="https://ui-avatars.com/api/?name=Akshay+Bharati&background=2563eb&color=fff&size=150"
+              src="https://ui-avatars.com/api/?name=John+Smith&background=2563eb&color=fff&size=150"
               alt="profile"
               style={{
                 width: "120px",
@@ -37,12 +40,11 @@ function SeekerProfile() {
             />
 
             <h2>{user.name}</h2>
-            <p>{user.role}</p>
+
+            <p>{user.designation}</p>
 
             <div className="mt-2">
-              <span className="badge badge-success">
-                Profile Score {user.profileScore}
-              </span>
+              <span className="badge badge-success">{user.role}</span>
             </div>
 
             <button className="btn btn-primary mt-3" style={{ width: "100%" }}>
@@ -50,7 +52,8 @@ function SeekerProfile() {
             </button>
           </div>
 
-          {/* Right Section */}
+          {/* Right Card */}
+
           <div className="card" style={{ gridColumn: "span 2" }}>
             <h2 className="mb-2">Personal Information</h2>
 
@@ -79,6 +82,27 @@ function SeekerProfile() {
 
                 <tr>
                   <td>
+                    <strong>Designation</strong>
+                  </td>
+                  <td>{user.designation}</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>Department</strong>
+                  </td>
+                  <td>{user.department}</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>Company</strong>
+                  </td>
+                  <td>{user.company}</td>
+                </tr>
+
+                <tr>
+                  <td>
                     <strong>Location</strong>
                   </td>
                   <td>{user.location}</td>
@@ -93,16 +117,16 @@ function SeekerProfile() {
 
                 <tr>
                   <td>
-                    <strong>Education</strong>
+                    <strong>Employee ID</strong>
                   </td>
-                  <td>{user.education}</td>
+                  <td>{user.employeeId}</td>
                 </tr>
 
                 <tr>
                   <td>
-                    <strong>Skills</strong>
+                    <strong>Joining Date</strong>
                   </td>
-                  <td>{user.skills}</td>
+                  <td>{user.joiningDate}</td>
                 </tr>
               </tbody>
             </table>
@@ -110,26 +134,17 @@ function SeekerProfile() {
         </div>
 
         {/* About */}
+
         <div className="card mt-3">
           <h2 className="mb-2">About Me</h2>
+
           <p>{user.about}</p>
         </div>
 
-        {/* Resume */}
-        <div className="card mt-3">
-          <div className="flex-between">
-            <div>
-              <h2>Resume</h2>
-              <p>Resume_React_Developer.pdf</p>
-            </div>
+        {/* Responsibilities */}
 
-            <button className="btn btn-primary">Download Resume</button>
-          </div>
-        </div>
-
-        {/* Skills */}
         <div className="card mt-3">
-          <h2 className="mb-2">Skills</h2>
+          <h2 className="mb-2">Responsibilities</h2>
 
           <div
             className="flex"
@@ -138,13 +153,26 @@ function SeekerProfile() {
               flexWrap: "wrap",
             }}
           >
-            <span className="badge badge-success">React</span>
-            <span className="badge badge-success">JavaScript</span>
-            <span className="badge badge-success">Node.js</span>
-            <span className="badge badge-success">Express</span>
-            <span className="badge badge-success">MongoDB</span>
-            <span className="badge badge-success">Git</span>
-            <span className="badge badge-success">REST API</span>
+            <span className="badge badge-success">Recruitment</span>
+            <span className="badge badge-success">Interview Scheduling</span>
+            <span className="badge badge-success">Candidate Screening</span>
+            <span className="badge badge-success">Job Posting</span>
+            <span className="badge badge-success">Employee Onboarding</span>
+            <span className="badge badge-success">Hiring</span>
+            <span className="badge badge-success">HR Operations</span>
+          </div>
+        </div>
+
+        {/* Account */}
+
+        <div className="card mt-3">
+          <div className="flex-between">
+            <div>
+              <h2>Account Status</h2>
+              <p>Verified Employer Account</p>
+            </div>
+
+            <span className="badge badge-success">Active</span>
           </div>
         </div>
       </div>
@@ -152,4 +180,4 @@ function SeekerProfile() {
   );
 }
 
-export default SeekerProfile;
+export default EmployerProfile;

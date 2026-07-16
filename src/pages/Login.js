@@ -12,7 +12,7 @@ export const title = {
 };
 
 function Login() {
-  const role = localStorage.getItem("role") || "SEEKER";
+  const role = sessionStorage.getItem("role") || "SEEKER";
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -42,8 +42,8 @@ function Login() {
 
       // const res = await fetchData("/login", data);
 
-      localStorage.setItem("token", "demo-token");
-      localStorage.setItem("role", role);
+      sessionStorage.setItem("token", "demo-token");
+      sessionStorage.setItem("role", role);
 
       navigate("/dashboard");
     } catch (err) {

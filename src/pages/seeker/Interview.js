@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
 
-function Interview() {
+function SeekerInterview() {
   const [search, setSearch] = useState("");
 
   const [interviews] = useState([
@@ -175,4 +175,4 @@ function Interview() {
   );
 }
 
-export default Interview;
+export default SeekerInterview;

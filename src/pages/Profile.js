@@ -1,15 +1,15 @@
-import EmployerDashboard from "./employer/Dashboard";
-import SeekerDashboard from "./seeker/Dashboard";
+import EmployerProfile from "./employer/Profile";
+import SeekerProfile from "./seeker/Profile";
 
-function Dashboard() {
+function Profile() {
   const role = sessionStorage.getItem("role");
 
   switch (role) {
     case "SEEKER":
-      return <SeekerDashboard />;
+      return <SeekerProfile />;
 
     case "EMPLOYER":
-      return <EmployerDashboard />;
+      return <EmployerProfile />;
 
     // case "ADMIN":
     //   return <AdminDashboard />;
@@ -19,4 +19,4 @@ function Dashboard() {
   }
 }
 
-export default Dashboard;
+export default Profile;

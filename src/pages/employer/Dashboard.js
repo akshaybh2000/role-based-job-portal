@@ -5,7 +5,7 @@ import { title } from "../Login";
 import Navbar from "../../components/Navbar";
 
 function EmployerDashboard() {
-  const role = localStorage.getItem("role");
+  const role = sessionStorage.getItem("role");
   const navigate = useNavigate();
 
   const activities = [
@@ -39,11 +39,8 @@ function EmployerDashboard() {
   return (
     <>
       <Navbar />
-
       <div className="dashboard-page">
         <div className="container mt-2">
-          {/* Header */}
-
           <div className="dashboard-header flex-between mb-3">
             <div>
               <h1>Employer Dashboard</h1>
@@ -131,7 +128,12 @@ function EmployerDashboard() {
               <h3>👥 View Applicants</h3>
               <p>Review applications from candidates.</p>
 
-              <button className="btn btn-primary mt-2">Applicants</button>
+              <button
+                className="btn btn-primary mt-2"
+                onClick={() => navigate("/applicants")}
+              >
+                Applicants
+              </button>
             </div>
 
             <div className="card text-center">
@@ -140,7 +142,7 @@ function EmployerDashboard() {
 
               <button
                 className="btn btn-primary mt-2"
-                onClick={() => navigate("/interview")}
+                onClick={() => navigate("/interviews")}
               >
                 Manage
               </button>

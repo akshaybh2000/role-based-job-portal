@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
+import AddJob from "./AddJob";
 
 function EmployerJobs() {
+  const [showJobModal, setShowJobModal] = useState(false);
+
   const [jobs, setJobs] = useState([
     {
       id: 1,
@@ -30,10 +33,13 @@ function EmployerJobs() {
     setJobs(jobs.filter((job) => job.id !== id));
   };
 
+  const addJob = (job) => {
+    setJobs((prev) => [...prev, job]);
+  };
+
   return (
     <>
       <Navbar />
-
       <div className="dashboard-page">
         <div className="container mt-2">
           <div className="dashboard-header flex-between mb-3">
@@ -42,7 +48,12 @@ function EmployerJobs() {
               <p>Manage all posted jobs.</p>
             </div>
 
-            <button className="btn btn-primary">+ Add Job</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => setShowJobModal(true)}
+            >
+              + Add Job
+            </button>
           </div>
 
           <table className="table">
@@ -101,6 +112,11 @@ function EmployerJobs() {
           </table>
         </div>
       </div>
+      <AddJob
+        isOpen={showJobModal}
+        onClose={() => setShowJobModal(false)}
+        onAddJob={addJob}
+      />
     </>
   );
 }

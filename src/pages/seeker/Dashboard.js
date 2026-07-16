@@ -5,7 +5,7 @@ import { title } from "../Login";
 import Navbar from "../../components/Navbar";
 
 function SeekerDashboard() {
-  const role = localStorage.getItem("role");
+  const role = sessionStorage.getItem("role");
   const navigate = useNavigate();
 
   const activities = [

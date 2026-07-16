@@ -3,9 +3,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Jobs from "./pages/Jobs";
 import Home from "./pages/seeker/Home";
-import Interview from "./pages/seeker/Interview";
-import Profile from "./pages/seeker/Profile";
+import Interview from "./pages/Interview";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Applicants from "./pages/employer/Applicants";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/interviews" element={<Interview />} />
+        <Route path="/applicants" element={<Applicants />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
