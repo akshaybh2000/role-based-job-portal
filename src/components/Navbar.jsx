@@ -13,41 +13,56 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                <h2 className="logo">JobPortal</h2>
+                <h2
+                    className="logo"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/dashboard")}
+                >
+                    💼 JobPortal
+                </h2>
 
-                {/* Common */}
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                {/* =========== JOB SEEKER ========== */}
 
-                {/* Job Seeker Menu */}
                 {role === "SEEKER" && (
                     <>
+                        <NavLink to="/dashboard">Dashboard</NavLink>
+
                         <NavLink to="/jobs">Jobs</NavLink>
 
                         <NavLink to="/interviews">Interviews</NavLink>
+
                     </>
                 )}
 
-                {/* Employer Menu */}
+                {/* ========= EMPLOYER ======== */}
+
                 {role === "EMPLOYER" && (
                     <>
+                        <NavLink to="/dashboard">Dashboard</NavLink>
+
                         <NavLink to="/jobs">Jobs</NavLink>
 
                         <NavLink to="/applicants">Applicants</NavLink>
 
                         <NavLink to="/interviews">Interviews</NavLink>
+
                     </>
                 )}
 
-                {/* Admin Menu (Optional) */}
+                {/* ======== ADMIN =========== */}
+
                 {role === "ADMIN" && (
                     <>
-                        <NavLink to="/jobs">Jobs</NavLink>
+                        <NavLink to="/dashboard">Dashboard</NavLink>
 
-                        <NavLink to="/applicants">Applicants</NavLink>
+                        <NavLink to="/seekers">Seekers</NavLink>
+
+                        <NavLink to="/employers">Employers</NavLink>
+
+                        <NavLink to="/jobs">Jobs</NavLink>
 
                         <NavLink to="/interviews">Interviews</NavLink>
 
-                        <NavLink to="/users">Users</NavLink>
                     </>
                 )}
             </div>
@@ -57,11 +72,18 @@ function Navbar() {
                     {role}
                 </span>
 
-                <NavLink to="/profile" className="profile-icon">
+                <NavLink
+                    to="/profile"
+                    className="profile-icon"
+                    title="Profile"
+                >
                     👤
                 </NavLink>
 
-                <button className="btn btn-danger" onClick={logout}>
+                <button
+                    className="btn btn-danger"
+                    onClick={logout}
+                >
                     Logout
                 </button>
             </div>

@@ -7,6 +7,8 @@ import Interview from "./pages/Interview";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Applicants from "./pages/employer/Applicants";
+import Seekers from "./pages/admin/Seekers";
+import Employers from "./pages/admin/Employers";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/interviews" element={<Interview />} />
         <Route path="/applicants" element={<Applicants />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/seekers" element={<Seekers />} />
+        <Route path="/employers" element={<Employers />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>

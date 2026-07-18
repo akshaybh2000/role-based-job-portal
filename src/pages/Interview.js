@@ -1,3 +1,4 @@
+import AdminInterviews from "./admin/Interviews";
 import EmployerInterview from "./employer/Interview";
 import SeekerInterview from "./seeker/Interview";
 
@@ -11,8 +12,8 @@ function Interview() {
     case "EMPLOYER":
       return <EmployerInterview />;
 
-    // case "ADMIN":
-    //   return <AdminDashboard />;
+    case "ADMIN":
+      return <AdminInterviews />;
 
     default:
       return <h2>Invalid Role</h2>;

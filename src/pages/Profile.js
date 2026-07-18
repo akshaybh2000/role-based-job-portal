@@ -1,3 +1,4 @@
+import AdminProfile from "./admin/Profile";
 import EmployerProfile from "./employer/Profile";
 import SeekerProfile from "./seeker/Profile";
 
@@ -11,8 +12,8 @@ function Profile() {
     case "EMPLOYER":
       return <EmployerProfile />;
 
-    // case "ADMIN":
-    //   return <AdminDashboard />;
+    case "ADMIN":
+      return <AdminProfile />;
 
     default:
       return <h2>Invalid Role</h2>;
