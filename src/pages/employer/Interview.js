@@ -2,24 +2,24 @@ import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import ScheduleInterview from "./interviewForm";
 
-const getStatusClass = (status) => {
-  switch (status) {
-    case "Scheduled":
-      return "status status-active";
+// const getStatusClass = (status) => {
+//   switch (status) {
+//     case "Scheduled":
+//       return "status status-active";
 
-    case "Pending":
-      return "status status-pending";
+//     case "Pending":
+//       return "status status-pending";
 
-    case "Completed":
-      return "status status-inactive";
+//     case "Completed":
+//       return "status status-inactive";
 
-    case "Cancelled":
-      return "status status-rejected";
+//     case "Cancelled":
+//       return "status status-rejected";
 
-    default:
-      return "status";
-  }
-};
+//     default:
+//       return "status";
+//   }
+// };
 
 function EmployerInterview() {
   const [showModal, setShowModal] = useState(false);
